@@ -22,7 +22,7 @@ def create_app(test_config=None):
     def home():
         return render_template(
             'map.html', 
-            map_key=os.getenv('GOOGLE_MAPS_API_KEY', 'GOOGLE_MAPS_API_KEY_WAS_NOT_SET?!')
+            map_key=os.getenv('MAPS_API_KEY', 'MAPS_API_KEY_WAS_NOT_SET?!')
         )
 
     @app.route('/detail', methods=['GET'])
